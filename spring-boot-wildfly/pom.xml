@@ -17,10 +17,10 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <deploy.jboss.host>127.0.0.1</deploy.jboss.host>
+        <deploy.jboss.host>10.0.2.6</deploy.jboss.host>
         <deploy.jboss.port>9990</deploy.jboss.port>
-        <deploy.jboss.username>wildfly</deploy.jboss.username>
-        <deploy.jboss.password>wildfly</deploy.jboss.password>
+        <deploy.jboss.username>jenkins</deploy.jboss.username>
+        <deploy.jboss.password>jenkins123</deploy.jboss.password>
     </properties>
 
     <dependencies>
@@ -76,7 +76,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <filename>${project.build.finalName}.war</filename>
+                    <filename>${project.artifactId}-${packaging}.${packaging}</filename>
                     <hostname>${deploy.jboss.host}</hostname>
                     <port>${deploy.jboss.port}</port>
                     <username>${deploy.jboss.username}</username>
